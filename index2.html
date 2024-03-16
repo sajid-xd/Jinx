@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jquery-3.7.1.js"></script>
+
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <h1>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+      laboriosam!
+    </h1>
+    <button>Change Text</button>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("h1").toggle();
+        });
+        $("button").dblclick(function () {
+          $("h1").show();
+        });
+
+        $("button").click(function () {
+          $("div").fadeOut(5000);
+        });
+
+        $("button").dblclick(function () {
+          $("div").fadeIn(5000);
+        });
+        $("button").click(function () {
+          $("div").slideToggle(5000);
+        });
+        $("button").dblclick(function () {
+          $("div").slideDown(5000);
+        });
+        $("button").click(function(){
+            $("div").animate({width:"800px"}).css("background-color","red")
+        })
+      });
+    </script>
+  </body>
+</html>
